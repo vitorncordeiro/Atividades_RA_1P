@@ -11,5 +11,7 @@ pagamentos sem atraso, cobrar o valor da prestação. Quando houver atraso, cobr
 multa, mais 0,1% de juros por dia de atraso."""
 def valorPagamento(valorPrestacao, diasAtraso=0):
     if diasAtraso:
-        valorTotal = valorPrestacao * 1.03 * (1.01 * diasAtraso)
-        
+        valorTotal = valorPrestacao * 1.03 * (0.01 * diasAtraso + 1)
+        return valorTotal
+prestacao = valorPagamento(100, 2)
+print(prestacao)
